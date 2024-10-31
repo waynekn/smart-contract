@@ -4,7 +4,7 @@ import { useState } from "react";
 
 import { Web3 } from "web3";
 
-const ADDRESS = "0x98f8B51e28aD5EFC8a652E0Dde0493D806dAC35C";
+const ADDRESS = "0x0bb59675c0B2645387FD58B3DC17543d6c01ad04";
 const ABI = [
   {
     inputs: [
