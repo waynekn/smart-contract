@@ -4,49 +4,75 @@ import { useState } from "react";
 
 import { Web3 } from "web3";
 
-const ADDRESS = "0x98f8B51e28aD5EFC8a652E0Dde0493D806dAC35C";
+const ADDRESS = "0xbc7da66ce7d347bf85dddb969ce38b0cd67b51ea";
 const ABI = [
   {
+    inputs: [],
+    name: "decrementNumber",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "incrementNumber",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
     inputs: [
-      { internalType: "uint256", name: "_startingPoint", type: "uint256" },
-      { internalType: "string", name: "_startingMessage", type: "string" },
+      {
+        internalType: "string",
+        name: "newMessage",
+        type: "string",
+      },
+    ],
+    name: "setMessage",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "uint256",
+        name: "startingPoint",
+        type: "uint256",
+      },
+      {
+        internalType: "string",
+        name: "startingMessage",
+        type: "string",
+      },
     ],
     stateMutability: "nonpayable",
     type: "constructor",
   },
   {
     inputs: [],
-    name: "decreaseNumber",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [],
     name: "getNumber",
-    outputs: [{ internalType: "uint256", name: "", type: "uint256" }],
+    outputs: [
+      {
+        internalType: "uint256",
+        name: "",
+        type: "uint256",
+      },
+    ],
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "increaseNumber",
-    outputs: [],
-    stateMutability: "nonpayable",
     type: "function",
   },
   {
     inputs: [],
     name: "message",
-    outputs: [{ internalType: "string", name: "", type: "string" }],
+    outputs: [
+      {
+        internalType: "string",
+        name: "",
+        type: "string",
+      },
+    ],
     stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [{ internalType: "string", name: "newMessage", type: "string" }],
-    name: "setMessage",
-    outputs: [],
-    stateMutability: "nonpayable",
     type: "function",
   },
 ];
